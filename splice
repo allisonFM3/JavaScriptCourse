@@ -1,0 +1,8 @@
+//The first two parameters of splice() are integers which represent indexes, or positions, 
+//of the array that splice() is being called upon. first value is index to start removing at, second is # of elements to delete
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+
+arr.splice(0,1);
+arr.splice(3,4);
+
+console.log(arr);
