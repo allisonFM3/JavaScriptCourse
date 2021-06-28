@@ -1,0 +1,7 @@
+function frankenSplice(arr1, arr2, n) {
+let arr = arr2.slice(); // copy of arr2 essentially
+arr.splice(n, 0, ...arr1); //0- don't want to delete anything so it just copies
+return arr;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
