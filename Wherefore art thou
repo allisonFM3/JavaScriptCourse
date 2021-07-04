@@ -1,0 +1,36 @@
+ /*
+ Make a function that looks through an array of objects (first argument) 
+ and returns an array of all objects that have matching name and value pairs (second argument). 
+ Each name and value pair of the source object has to be present in the object from the collection if 
+ it is to be included in the returned array.
+*/
+ 
+ 
+ function whatIsInAName(collection, source) {
+  var arr = [];
+  // Only change code below this line
+  var properties = Object.keys(source);
+  for(let i = 0; i < collection.length; i++)
+  {
+    let count = 0;
+    for(let j = 0; j < properties.length; j++)
+    {
+      if(collection[i].hasOwnProperty(properties[j]))
+      {
+        if(collection[i][properties[j]] === source[properties[j]])
+        {
+          count++;
+        }
+      }
+    }
+    if(count === properties.length)
+    {
+      arr.push(collection[i]);
+    }
+  }
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
