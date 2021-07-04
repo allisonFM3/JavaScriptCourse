@@ -1,0 +1,15 @@
+function destroyer(arr) {
+  let newArr = [];
+  let argues = Array.from(arguments).slice(1);
+  for(let i = 0; i < arr.length; i++)
+  {
+    let item = arr[i];
+    if(argues.indexOf(item) === -1)
+    {
+      newArr.push(item);
+    }
+  }
+  return newArr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
