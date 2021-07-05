@@ -1,0 +1,43 @@
+function smallestCommons(arr) {
+  function findLCM(num1,num2)
+  {
+    let LCM = 0;
+    let i = 1;
+    let number = num1;
+    let other = num2;
+    let boolean = true;;
+    if(num2 > num1)
+    {
+      number = num2;
+      other = num1;
+    }
+    while(boolean)
+    {
+      let prod = number * i;
+      if(prod % other === 0)
+      {
+        LCM = prod;
+        let count = 0;
+       for(let i = other; i < number; i++)
+      {
+        if(prod % i != 0)
+        {
+          count++;
+        }
+      }
+      if(count === 0)
+      {
+        boolean = false;
+      }
+      }
+      i++;
+      
+    }
+    return LCM;
+  }
+
+  return findLCM(arr[0], arr[1]);
+}
+
+
+smallestCommons([1,5]);
