@@ -1,0 +1,31 @@
+function sumPrimes(num) {
+  function primeNum(num)
+  {
+     if(num <= 1)
+     {
+       return false;
+     }
+     for(let i = 2; i < num1; i++)
+    {
+      if(num % i == 0)
+      {
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  let num1 = 2;
+  let sum = 0;
+  while(num1 <= num)
+  {
+   if(primeNum(num1))
+   {
+     sum+=num1;
+   }
+   num1++;
+  }
+  return sum;
+}
+
+sumPrimes(10);
