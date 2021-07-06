@@ -1,0 +1,30 @@
+var Person = function(firstAndLast) {
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  var fullName = firstAndLast;
+
+  this.getFullName = function() {
+    return fullName;
+  }
+  this.getFirstName = function() {
+    let index = fullName.indexOf(" ");
+    return fullName.slice(0,index);
+  }
+  this.getLastName = function() {
+    let index = fullName.indexOf(" ");
+    return fullName.slice(index+1);
+  }
+  this.setFirstName = function(first){
+    fullName = first + fullName.slice(fullName.indexOf(" "));
+  }
+  this.setLastName = function(last){
+    fullName = fullName.slice(0,fullName.indexOf(" ")+1) +last;
+  }
+  this.setFullName = function(firstAndLast){
+   fullName = firstAndLast;
+  }
+
+};
+
+var bob = new Person('Bob Ross');
+bob.getFullName();
